@@ -17,6 +17,7 @@ Herewego is a decision-based interactive game where you and your seven friends a
 4. Continue making choices until you reach an ending.
 
 Pic layout of story layout/decision layout:
+
 <img width="627" alt="StoryStart" src="https://github.com/JVelezFD/Herewego/assets/101678295/d65aa859-3d2c-4f13-baf8-b1301658b2ba">
 
 <img width="596" alt="MadeaDecision" src="https://github.com/JVelezFD/Herewego/assets/101678295/84c46d75-c284-4c02-af54-02a91f0c792b">
