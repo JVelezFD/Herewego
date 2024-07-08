@@ -1,18 +1,27 @@
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: #f0f0f0;
+  background-color: #f5f5f5;
   color: #000;
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 #game-container {
   background-color: #fff;
   border: 5px solid #000;
-  padding: 20px;
+  padding: 40px;
   max-width: 600px;
-  margin: 20px auto;
+  width: 100%;
+  text-align: center;
   box-shadow: 10px 10px 0 #000;
+}
+
+#story {
+  margin-bottom: 40px;
+  font-size: 1.2em;
 }
 
 .choice {
