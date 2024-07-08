@@ -1,5 +1,6 @@
 const storyElement = document.getElementById("story");
 const choicesElement = document.getElementById("choices");
+const decisionDisplay = document.getElementById("decision-display");
 
 const story = {
   start: {
@@ -118,6 +119,8 @@ const story = {
 function displayStoryNode(node) {
   storyElement.innerHTML = node.text;
   choicesElement.innerHTML = "";
+  decisionDisplay.classList.add("hidden"); // Hide decision display
+
   node.choices.forEach((choice) => {
     const button = document.createElement("a");
     button.className = "choice";
@@ -125,10 +128,21 @@ function displayStoryNode(node) {
     button.href = "#";
     button.onclick = (event) => {
       event.preventDefault(); // Prevent the default action of the anchor element
-      displayStoryNode(story[choice.next]);
+      animateDecision(choice.text);
+      setTimeout(() => displayStoryNode(story[choice.next]), 1000); // Display next node after animation
     };
     choicesElement.appendChild(button);
   });
+}
+
+// Temp animation will replace with pixel characters
+function animateDecision(text) {
+  decisionDisplay.innerText = `You chose: ${text}`;
+  decisionDisplay.classList.remove("hidden");
+  decisionDisplay.classList.add("animate");
+  setTimeout(() => {
+    decisionDisplay.classList.remove("animate");
+  }, 1000);
 }
 
 displayStoryNode(story.start);
